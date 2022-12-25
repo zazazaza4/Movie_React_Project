@@ -10,8 +10,8 @@ import Footer from "./components/footer/Footer";
 function App() {
   return (
     <>
-      <Header />
       <BrowserRouter>
+        <Header />
         <RoutesCustom />
       </BrowserRouter>
       <Footer />
