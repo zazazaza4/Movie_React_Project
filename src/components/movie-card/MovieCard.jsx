@@ -9,7 +9,7 @@ import apiConfig from "../../api/apiConfig";
 import "./movie.card.scss";
 
 const MovieCard = ({ item }, props) => {
-  const link = "/" + category[props.category] + "/" + item.id;
+  const link = "/" + category[props.category] + "/" + item?.id;
   const bg = apiConfig.w500Image(item.poster_path || item.backdrop_path);
 
   return (
