@@ -13,8 +13,8 @@ function App() {
       <BrowserRouter>
         <Header />
         <RoutesCustom />
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </>
   );
 }
