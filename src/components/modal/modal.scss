@@ -24,18 +24,19 @@
     padding: 2rem;
     background-color: $body-bg;
     width: 50%;
+    height: 70%;
     opacity: 0;
     transform: translateY(-250px);
     transition: transform 0.6s ease, opacity 0.6s ease;
     position: relative;
 
-    @include table {
+    @include tablet {
       width: 80%;
     }
 
-    &__clone {
+    &__close {
       position: absolute;
-      right: 5px;
+      right: 6px;
       top: 5px;
       font-size: 1.5rem;
 

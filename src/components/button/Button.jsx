@@ -13,10 +13,10 @@ const Button = (props) => {
   );
 };
 
-const OutlineButton = (props) => {
+export const OutlineButton = (props) => {
   return (
     <Button
-      className={`btn-outline ${props.className}`}
+      className={`btn-outline ${props.className ?? props.className}`}
       onClick={props.onClick ? () => props.onClick() : null}
     >
       {props.children}
