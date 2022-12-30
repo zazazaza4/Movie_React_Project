@@ -8,6 +8,7 @@ import PropTypes from "prop-types";
 import "./movie-grid.scss";
 import MovieCard from "../movie-card/MovieCard";
 import { OutlineButton } from "../button/Button";
+import MovieSearch from "../movie-search/MovieSearch";
 
 const MovieGrid = (props) => {
   const [items, setItems] = useState([]);
@@ -75,6 +76,9 @@ const MovieGrid = (props) => {
 
   return (
     <>
+      <div className="section mb-3">
+        <MovieSearch category={props.category} keyword={keyword} />
+      </div>
       <div className="movie-grid">
         {items.map((item, index) => (
           <MovieCard category={props.category} item={item} key={item.id} />

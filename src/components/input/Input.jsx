@@ -8,7 +8,7 @@ const Input = ({ type, placeholder, value, onChange }) => {
       type={type}
       placeholder={placeholder}
       value={value}
-      onChange={onChange ? (e) => onChange(e) : null}
+      onChange={onChange ? (e) => onChange(e.target.value) : null}
     />
   );
 };
