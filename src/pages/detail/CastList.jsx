@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import apiConfig from "../../api/apiConfig";
 import tmdbApi from "../../api/tmdbApi";
 
+import "./detail.scss";
+
 const CastList = (props) => {
   const [casts, setCasts] = useState([]);
   const { category } = useParams();
@@ -14,6 +16,7 @@ const CastList = (props) => {
       const response = await tmdbApi.credits(category, props.id);
       setCasts(response.cast.slice(0, 5));
     };
+    getCredits();
   }, [category, props.id]);
 
   return (
@@ -23,9 +26,7 @@ const CastList = (props) => {
           <div
             className="casts__item__img"
             style={{
-              backgroundImage: `url(${apiConfig.originalImage(
-                cast.backdrop_path || cast.poster_path
-              )})`,
+              backgroundImage: `url(${apiConfig.w500Image(cast.profile_path)})`,
             }}
           ></div>
           <p className="casts__item__name">{cast.name}</p>
@@ -36,7 +37,7 @@ const CastList = (props) => {
 };
 
 CastList.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default CastList;

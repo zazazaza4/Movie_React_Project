@@ -22,6 +22,7 @@ const MovieList = (props) => {
             break;
           default:
             response = await tmdbApi.getTvList(props.type, { params });
+            break;
         }
       } else {
         response = await tmdbApi.similar(props.type, props.id);
@@ -47,7 +48,7 @@ const MovieList = (props) => {
 MovieList.propTypes = {
   category: PropsTypes.string.isRequired,
   type: PropsTypes.string.isRequired,
-  id: PropsTypes.string.isRequired,
+  id: PropsTypes.string,
 };
 
 export default MovieList;

@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Catalog from "../pages/Catalog";
-import Detail from "../pages/Detail";
+import Detail from "../pages/detail/Detail";
 import Home from "../pages/Home";
 
 const RoutesCustom = () => {
