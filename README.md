@@ -14,7 +14,7 @@
 Clone this repo
 
 ```sh
-$ git clone git@github.com:JuneDomingo/movieapp.git
-$ cd movieapp
+$ git clone git@github.com:zazazaza4/Movie_React_Project.git
+$ cd Movie_React_Project
 $ yarn install or npm install
 ```
